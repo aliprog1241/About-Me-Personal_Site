@@ -476,6 +476,7 @@ button[type="submit"] {
 }
 /* Contact page styles */
 .contact-grid {
+
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
@@ -487,6 +488,7 @@ button[type="submit"] {
 .contact-form {
     padding: 40px;
 }
+
 .contact-form h2 {
     color: white;
     font-size: 2rem;
@@ -495,6 +497,7 @@ button[type="submit"] {
 }
 .form-group {
     margin-bottom: 20px;
+
 }
 .form-group label {
     display: block;
@@ -533,6 +536,11 @@ button[type="submit"] {
 }
 .contact-info {
     padding: 40px;
+    color: white;
+}
+
+.contact-info a {
+    text-decoration: none;
     color: white;
 }
 .contact-info h2 {
