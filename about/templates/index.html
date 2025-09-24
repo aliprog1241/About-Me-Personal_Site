@@ -270,49 +270,77 @@
         </div>
     </div>
 
-    <!-- CONTACT -->
 <!-- CONTACT -->
 <div id="contact" class="page">
     <div class="container">
-        <div class="content-wrapper" style="display: flex; justify-content: center; align-items: center; min-height: 80vh;">
-            <section class="contact-info glass" style="color: white; text-align: center; max-width: 500px; padding: 30px;">
+        <div class="content-wrapper" style="display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 80vh; gap: 40px;">
+
+            <!-- Contact Form -->
+            <div class="contact-form glass" style="color:white; text-align: center; max-width: 600px; width: 100%; padding: 30px;">
+                <h2>Get In Touch</h2>
+                <form method="POST" action="{% url 'contact' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </div>
+
+            <!-- Contact Info -->
+            <section class="contact-info glass" style="color: white; text-align: center; max-width: 600px; width: 100%; padding: 30px;">
                 <h2>Contact Me</h2>
 
-                <div class="contact-item">
+                <div class="contact-item" style="border: none;">
                     <div class="contact-item-icon">📧</div>
                     <div class="contact-item-text">
                         <h4>Email</h4>
-                        <p><a href="mailto:miri03369@gmail.com" style="color: white;">miri03369@gmail.com</a></p>
+                        <p><a href="mailto:miri03369@gmail.com" style="color: white; text-decoration: none;">miri03369@gmail.com</a></p>
                     </div>
                 </div>
 
-                <div class="contact-item">
+                <div class="contact-item" style="border: none;">
                     <div class="contact-item-icon">💻</div>
                     <div class="contact-item-text">
                         <h4>GitHub</h4>
-                        <p><a href="https://github.com/aliprog1241" target="_blank" style="color: white;">github.com/aliprog1241</a></p>
+                        <p><a href="https://github.com/aliprog1241" target="_blank" style="color: white; text-decoration: none;">github.com/aliprog1241</a></p>
                     </div>
                 </div>
 
-                <div class="contact-item">
+                <div class="contact-item" style="border: none;">
                     <div class="contact-item-icon">📞</div>
                     <div class="contact-item-text">
                         <h4>Phone</h4>
-                        <p><a href="tel:09199983035" style="color: white;">+98 919 998 3035</a></p>
+                        <p><a href="tel:09199983035" style="color: white; text-decoration: none;">+98 919 998 3035</a></p>
                     </div>
                 </div>
 
-                <div class="contact-item">
+                <div class="contact-item" style="border: none;">
                     <div class="contact-item-icon">📱</div>
                     <div class="contact-item-text">
                         <h4>Telegram</h4>
-                        <p><a href="https://t.me/hajali_4981" target="_blank">@hajali_4981</a></p>
+                        <p><a href="https://t.me/hajali_4981" target="_blank" style="color: white; text-decoration: none;">@hajali_4981</a></p>
                     </div>
                 </div>
             </section>
+
         </div>
     </div>
 </div>
+
 
     <!-- FOOTER -->
     <div id="footer">
