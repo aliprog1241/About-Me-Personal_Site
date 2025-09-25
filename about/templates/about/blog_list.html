@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blog</title>
+</head>
+<body style="font-family: sans-serif; background: #111; color: white; padding: 20px;">
+  <h1>📚 Blog</h1>
+  <ul>
+    {% for post in posts %}
+      <li>
+        <a href="{% url 'blog_detail' post.slug %}" style="color: #00aced; text-decoration:none;">
+          {{ post.title }}
+        </a>
+        <small>({{ post.created_at|date:"Y-m-d H:i" }})</small>
+      </li>
+    {% empty %}
+      <p>No posts yet.</p>
+    {% endfor %}
+  </ul>
+  <a href="/" style="color: gray;">⬅ Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ post.title }}</title>
+</head>
+<body style="font-family: sans-serif; background: #111; color: white; padding: 20px;">
+  <h1>{{ post.title }}</h1>
+  <p><small>Created: {{ post.created_at|date:"Y-m-d H:i" }}</small></p>
+  <div>
+    {{ post.content|linebreaks }}
+  </div>
+  <br>
+  <a href="{% url 'blog_list' %}" style="color: #00aced;">⬅ Back to Blog</a>
+</body>
+</html>

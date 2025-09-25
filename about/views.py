@@ -1,6 +1,7 @@
 from django.http import JsonResponse
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .forms import ContactForm
+from .models import Post
 import logging
 
 logger = logging.getLogger(__name__)
@@ -29,3 +30,12 @@ def     contact_view(request):
     # GET یا POST نامعتبر
     form = ContactForm()
     return render(request, "about/index.html", {"form": form})
+
+
+def blog_list(request):
+    posts = Post.objects.all().order_by('-created_at')
+    return render(request, "blog_list.html", {"posts": posts})
+
+def blog_detail(request, slug):
+    post = get_object_or_404(Post, slug=slug)
+    return render(request, "blog_detail.html", {"post": post})
