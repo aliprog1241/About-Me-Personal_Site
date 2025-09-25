@@ -1,6 +1,3 @@
-
-
-
 DB_NAME = 'AboutMe'
 DB_USER = "postgres"
 DB_PASSWORD = 1234

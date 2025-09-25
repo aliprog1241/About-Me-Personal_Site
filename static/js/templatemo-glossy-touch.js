@@ -102,37 +102,75 @@ let currentPage = 'home';
         document.head.appendChild(style);
 
         // Form submission handling
-        document.querySelector('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-// Form submission handling
-document.querySelector('form').addEventListener('submit', function() {
-    // نمایش پیام موفقیت موقت (در حین ارسال فرم به سرور)
-    const successMsg = document.createElement('div');
-    successMsg.style.cssText = `
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background: rgba(46, 204, 113, 0.9);
-        color: white;
-        padding: 20px 40px;
-        border-radius: 10px;
-        backdrop-filter: blur(20px);
-        z-index: 10000;
-        animation: fadeIn 0.3s ease;
+// Form submission handling (AJAX with fallback)
+(function () {
+  const form = document.querySelector('#contact-form'); // فقط همین فرم
+  if (!form) return;
+
+  function showToast(msg, ok = true, t = 3000) {
+    const toast = document.createElement('div');
+    toast.style.cssText = `
+      position: fixed; top: 20px; left: 50%; transform: translateX(-50%);
+      background: ${ok ? 'rgba(40,167,69,0.9)' : 'rgba(192,57,43,0.9)'};
+      color: #fff; padding: 12px 18px; border-radius: 10px; z-index: 10000;
+      font-family: inherit;
     `;
-    successMsg.textContent = "Message sent successfully! We'll get back to you soon.";
+    toast.textContent = msg;
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), t);
+  }
 
-    document.body.appendChild(successMsg);
+  // گرفتن CSRF
+  function getCsrf() {
+    const cookie = document.cookie.split('; ').find(r => r.startsWith('csrftoken='))?.split('=')[1];
+    if (cookie) return cookie;
+    return form.querySelector('input[name=csrfmiddlewaretoken]')?.value || '';
+  }
 
-    // حذف پیام بعد از 3 ثانیه
-    setTimeout(() => {
-        successMsg.remove();
-    }, 3000);
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault(); // ارسال پیش‌فرض رو می‌گیریم، چون AJAX می‌فرستیم
 
-    // نیازی به reset دستی فرم نیست چون بعد از submit
-    // صفحه‌ی success.html از سمت سرور لود میشه
-});
+    const csrf = getCsrf();
+    if (!csrf) {
+      // اگر CSRF پیدا نشد، برگرد به ارسال عادی
+      form.submit();
+      return;
+    }
+
+    showToast('Sending...', true, 1500);
+
+    try {
+      const res = await fetch(form.getAttribute('action') || '/contact/', {
+        method: 'POST',
+        credentials: 'same-origin',
+        headers: {
+          'X-CSRFToken': csrf,
+          'X-Requested-With': 'XMLHttpRequest'
+        },
+        body: new FormData(form),
+      });
+
+      const ct = res.headers.get('content-type') || '';
+      const isJson = ct.includes('application/json');
+      const data = isJson ? await res.json().catch(() => null) : null;
+
+      if (!res.ok || (isJson && data && data.ok === false)) {
+        const errMsg = data?.errors ? JSON.stringify(data.errors) : `HTTP ${res.status}`;
+        showToast('Submit error: ' + errMsg, false, 4000);
+        // برگرد به ارسال عادی برای نمایش خطا
+        form.submit();
+        return;
+      }
+
+      // موفقیت
+      showToast("Message sent successfully! We'll get back to you soon.");
+      form.reset();
+    } catch (err) {
+      showToast('Network error, submitting normally...', false, 2500);
+      form.submit();
+    }
+  });
+})();
 
 
         // Add fade in animation

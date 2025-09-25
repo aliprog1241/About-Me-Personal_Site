@@ -1,0 +1,382 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossy Touch - Modern Glass Design Experience</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/templatemo-glossy-touch.css' %}">
+</head>
+<body>
+<div class="bg-shapes">
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+    <div class="shape"></div>
+</div>
+
+<!-- HEADER -->
+<header>
+    <div class="container">
+        <nav class="glass">
+            <div class="logo" onclick="showPage('home')">
+                <div class="logo-icon">
+                    <!-- لوگو SVG همون اصلی -->
+                    <svg viewBox="0 0 48 48" fill="white" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="16" cy="16" r="5" opacity="0.9"/>
+                        <circle cx="32" cy="16" r="4" opacity="0.8"/>
+                        <circle cx="16" cy="32" r="4" opacity="0.7"/>
+                        <circle cx="32" cy="32" r="5" opacity="0.85"/>
+                        <circle cx="24" cy="8" r="2" opacity="1"/>
+                        <circle cx="8" cy="24" r="2" opacity="0.9"/>
+                        <circle cx="40" cy="24" r="2" opacity="0.9"/>
+                        <circle cx="24" cy="40" r="2" opacity="1"/>
+                        <circle cx="8" cy="8" r="1" opacity="0.6"/>
+                        <circle cx="40" cy="8" r="1" opacity="0.6"/>
+                        <circle cx="8" cy="40" r="1" opacity="0.6"/>
+                        <circle cx="40" cy="40" r="1" opacity="0.6"/>
+                    </svg>
+                </div>
+                <span>Glossy Touch</span>
+            </div>
+            <div class="nav-links">
+                <a href="#" onclick="showPage('home')" class="active">Home</a>
+                <a href="#" onclick="showPage('about')">About</a>
+                <a href="#" onclick="showPage('services')">Services</a>
+                <a href="#" onclick="showPage('contact')">Contact</a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<!-- HOME -->
+<div id="home" class="page active">
+    <div class="container">
+        <div class="content-wrapper">
+            <section class="hero glass">
+                <div class="hero-image">
+                    <img src="{% static 'images/templatemo-futuristic-girl.jpg' %}"
+                         alt="Modern Technology Interaction"/>
+                </div>
+                <div class="hero-content">
+                    <h1>Welcome to the Future</h1>
+                    <p>Experience cutting-edge glass morphism design that brings depth and elegance to modern web
+                        interfaces. Clean, translucent, and beautifully interactive.</p>
+                    <a href="#" class="cta-button" onclick="showPage('about')">Learn More</a>
+                </div>
+            </section>
+
+            <section class="features">
+                <!-- همه feature-card ها بدون تغییر -->
+            </section>
+        </div>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<div id="about" class="page">
+    <div class="container">
+        <div class="content-wrapper">
+
+            <div class="about-text glass" style="color: white;">
+                <h2 style="text-align: center">"About Me"</h2>
+                <p>
+                    Hi, my name is <strong>Ali Miri</strong>. I am <strong>22 years old</strong> and a passionate
+                    <strong>Python</strong> and <strong>Django</strong> developer with over <strong>3 years</strong> of
+                    hands-on experience.
+                </p>
+                <p>
+                    I enjoy building clean, scalable, and secure web applications. Over the years, I have worked on
+                    projects that required both strong backend expertise and solid frontend fundamentals.
+                </p>
+                <p>
+                    My core skills include: <strong>Django</strong>, <strong>Python</strong>, <strong>Django REST
+                    Framework (DRF)</strong>,
+                    <strong>Docker</strong>, <strong>PostgreSQL</strong>, <strong>HTML</strong>, and
+                    <strong>CSS</strong>.
+                </p>
+                <p>
+                    I believe in combining creativity and technical knowledge to deliver solutions that are both
+                    functional and visually appealing.
+                </p>
+
+                <div class="about-text glass" dir="rtl" style="color: white;">
+                    <h2 style="text-align: center">"درباره من"</h2>
+                    <p>
+                        سلام! من <strong>علی میری</strong> هستم. <strong>۲۲ ساله</strong> و یک توسعه‌دهنده
+                        پرانرژی <strong>پایتون</strong> و <strong>جنگو</strong> با بیش از <strong>۳ سال تجربه</strong>.
+                    </p>
+                    <p>
+                        من از ساخت وب‌اپلیکیشن‌های تمیز، مقیاس‌پذیر و امن لذت می‌برم.
+                        در این مدت روی پروژه‌هایی کار کردم که نیاز به مهارت در سمت بک‌اند و همین‌طور تسلط به فرانت‌اند
+                        داشتند.
+                    </p>
+                    <p>
+                        مهارت‌های اصلی من شامل: <strong>Django</strong>، <strong>Python</strong>،
+                        <strong>Django REST Framework (DRF)</strong>، <strong>Docker</strong>،
+                        <strong>PostgreSQL</strong>، <strong>HTML</strong> و <strong>CSS</strong> هستند.
+                    </p>
+                    <p>
+                        باور دارم که ترکیب خلاقیت با دانش فنی می‌تونه راهکارهایی بسازه که هم کاربردی باشن و هم زیبا.
+                    </p>
+                </div>
+
+            </div>
+
+            <!-- بخش About (همه متن‌ها و stat-card ها بدون تغییر) -->
+        </div>
+    </div>
+</div>
+
+<!-- SERVICES -->
+<div id="services" class="page">
+    <div class="container">
+        <div class="content-wrapper">
+            <section class="services-grid" style="color: white;" dir="ltr">
+                <div class="service-card glass" style="text-align: left;">
+                    <div class="service-header">
+                        <div class="service-icon">🐍</div>
+                        <h3><strong>Python & Django Development</strong></h3>
+                    </div>
+                    <p>
+                        Building secure and scalable web applications with <strong>Python</strong> and
+                        <strong>Django</strong>.
+                        Skilled in creating clean APIs and powerful backends.
+                    </p>
+                </div>
+
+                <div class="service-card glass" style="text-align: left;">
+                    <div class="service-header">
+                        <div class="service-icon">⚡</div>
+                        <h3><strong>Django REST Framework (DRF)</strong></h3>
+                    </div>
+                    <p>
+                        Designing and implementing RESTful APIs using <strong>DRF</strong>.
+                        Powering modern web and mobile applications with efficient endpoints.
+                    </p>
+                </div>
+
+                <div class="service-card glass" style="text-align: left;">
+                    <div class="service-header">
+                        <div class="service-icon">🐳</div>
+                        <h3><strong>Docker & Deployment</strong></h3>
+                    </div>
+                    <p>
+                        Containerizing applications with <strong>Docker</strong> for smoother development and
+                        deployment.
+                        Ensuring consistency across different environments.
+                    </p>
+                </div>
+
+                <div class="service-card glass" style="text-align: left;">
+                    <div class="service-header">
+                        <div class="service-icon">🗄️</div>
+                        <h3><strong>PostgreSQL Database Design</strong></h3>
+                    </div>
+                    <p>
+                        Working with <strong>PostgreSQL</strong> to design optimized schemas,
+                        write efficient queries, and manage data securely.
+                    </p>
+                </div>
+
+                <div class="service-card glass" style="text-align: left;">
+                    <div class="service-header">
+                        <div class="service-icon">🎨</div>
+                        <h3><strong>Frontend Basics</strong></h3>
+                    </div>
+                    <p>
+                        Creating responsive and user-friendly interfaces using <strong>HTML</strong> and
+                        <strong>CSS</strong>,
+                        blending design with functionality.
+                    </p>
+                </div>
+
+                <div class="service-card glass" style="text-align: left;">
+                    <div class="service-header">
+                        <div class="service-icon">🌐</div>
+                        <h3><strong>Git & GitHub</strong></h3>
+                    </div>
+                    <p>
+                        Managing source code with <strong>Git</strong> and collaborating via <strong>GitHub</strong>.
+                        Experienced with branching, pull requests, and CI/CD pipelines for professional teamwork.
+                    </p>
+                </div>
+            </section>
+            <section class="services-grid" style="color: white;" dir="rtl">
+                <div class="service-card glass" style="text-align: right;">
+                    <div class="service-header">
+                        <div class="service-icon">🐍</div>
+                        <h3><strong>توسعه با Python و Django</strong></h3>
+                    </div>
+                    <p>
+                        ساخت وب‌اپلیکیشن‌های امن و مقیاس‌پذیر با <strong>Python</strong> و <strong>Django</strong>.
+                        تجربه در پیاده‌سازی APIهای تمیز و بک‌اندهای قدرتمند.
+                    </p>
+                </div>
+
+                <div class="service-card glass" style="text-align: right;">
+                    <div class="service-header">
+                        <div class="service-icon">⚡</div>
+                        <h3><strong>Django REST Framework (DRF)</strong></h3>
+                    </div>
+                    <p>
+                        طراحی و پیاده‌سازی APIهای RESTful با استفاده از <strong>DRF</strong>.
+                        تأمین زیرساخت برای اپلیکیشن‌های وب و موبایل مدرن.
+                    </p>
+                </div>
+
+                <div class="service-card glass" style="text-align: right;">
+                    <div class="service-header">
+                        <div class="service-icon">🐳</div>
+                        <h3><strong>Docker و استقرار</strong></h3>
+                    </div>
+                    <p>
+                        کانتینرسازی اپلیکیشن‌ها با <strong>Docker</strong> برای توسعه و استقرار سریع‌تر.
+                        تضمین پایداری و یکپارچگی در همه محیط‌ها.
+                    </p>
+                </div>
+
+                <div class="service-card glass" style="text-align: right;">
+                    <div class="service-header">
+                        <div class="service-icon">🗄️</div>
+                        <h3><strong>طراحی دیتابیس PostgreSQL</strong></h3>
+                    </div>
+                    <p>
+                        طراحی اسکیمای بهینه در <strong>PostgreSQL</strong>،
+                        نوشتن کوئری‌های سریع و مدیریت ایمن داده‌ها.
+                    </p>
+                </div>
+
+                <div class="service-card glass" style="text-align: right;">
+                    <div class="service-header">
+                        <div class="service-icon">🎨</div>
+                        <h3><strong>طراحی فرانت‌اند پایه</strong></h3>
+                    </div>
+                    <p>
+                        ساخت رابط‌های کاربری ساده و واکنش‌گرا با <strong>HTML</strong> و <strong>CSS</strong>،
+                        ترکیب زیبایی و کارایی در یک تجربه کاربری.
+                    </p>
+                </div>
+
+                <div class="service-card glass" style="text-align: right;">
+                    <div class="service-header">
+                        <div class="service-icon">🌐</div>
+                        <h3><strong>Git و GitHub</strong></h3>
+                    </div>
+                    <p>
+                        مدیریت نسخه کد با <strong>Git</strong> و همکاری تیمی از طریق <strong>GitHub</strong>.
+                        تسلط بر branching، pull requests و CI/CD برای توسعه تیمی حرفه‌ای.
+                    </p>
+                </div>
+            </section>
+
+            <!-- همه service-card ها بدون تغییر -->
+        </div>
+    </div>
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="page">
+  <div class="container">
+    <div class="content-wrapper"
+         style="display: flex; justify-content: center; align-items: flex-start; gap: 40px; flex-wrap: wrap; min-height: 80vh;">
+
+      <!-- Contact Form -->
+      <div class="contact-form glass"
+           style="color:white; text-align: center; max-width: 600px; width: 100%; padding: 30px; flex: 1;">
+        <h2>Get In Touch</h2>
+        <form id="contact-form" method="POST" action="{% url 'contact' %}">
+          {% csrf_token %}
+          {% if form.errors %}
+            <div style="color: red; text-align: left; margin: 10px;">
+              {{ form.errors }}
+            </div>
+          {% endif %}
+          <div class="form-group">
+            <label for="id_name">Full Name</label>
+            <input type="text" id="id_name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="id_email">Email Address</label>
+            <input type="email" id="id_email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="id_subject">Subject</label>
+            <input type="text" id="id_subject" name="subject">
+          </div>
+          <div class="form-group">
+            <label for="id_message">Message</label>
+            <textarea id="id_message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="cta-button">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <section class="contact-info glass"
+               style="color: white; text-align: center; max-width: 400px; width: 100%; padding: 30px; flex: 1;">
+        <h2>Contact Me</h2>
+        <div class="contact-item" style="border: none;">
+          <div class="contact-item-icon">📧</div>
+          <div class="contact-item-text">
+            <h4>Email</h4>
+            <p><a href="mailto:miri03369@gmail.com" style="color: white; text-decoration: none;">miri03369@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="contact-item" style="border: none;">
+          <div class="contact-item-icon">💻</div>
+          <div class="contact-item-text">
+            <h4>GitHub</h4>
+            <p><a href="https://github.com/aliprog1241" target="_blank" style="color: white; text-decoration: none;">github.com/aliprog1241</a></p>
+          </div>
+        </div>
+        <div class="contact-item" style="border: none;">
+          <div class="contact-item-icon">📞</div>
+          <div class="contact-item-text">
+            <h4>Phone</h4>
+            <p><a href="tel:09199983035" style="color: white; text-decoration: none;">+98 919 998 3035</a></p>
+          </div>
+        </div>
+        <div class="contact-item" style="border: none;">
+          <div class="contact-item-icon">📱</div>
+          <div class="contact-item-text">
+            <h4>Telegram</h4>
+            <p><a href="https://t.me/hajali_4981" target="_blank" style="color: white; text-decoration: none;">@hajali_4981</a></p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- FOOTER -->
+<div id="footer">
+    <div class="container">
+        <footer class="glass">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="#" onclick="showPage('about')">About Us</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">XML Sitemap</a>
+                    <a href="#" onclick="showPage('contact')">Contact</a>
+                </div>
+                <div class="copyright">
+                    &copy; 2025 Glossy Touch. All rights reserved. Crafted with modern web technologies.
+                    Provided by <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="{% static 'js/templatemo-glossy-touch.js' %}"></script>
+</body>
+</html>
