@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +11,29 @@
     <link rel="stylesheet" href="{% static 'css/templatemo-glossy-touch.css' %}">
 </head>
 <body>
+
+<!-- Language Switcher (small, top-right) -->
+<div style="position: fixed; top: 15px; right: 20px; z-index: 2000;">
+    <form action="{% url 'set_language' %}" method="post" style="display:inline;">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ request.path }}">
+        <button type="submit" name="language" value="fa"
+                style="background: rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.4);
+                       border-radius: 6px; color:white; font-size:12px; padding:4px 8px; cursor:pointer;">
+            🇮🇷 FA
+        </button>
+    </form>
+    <form action="{% url 'set_language' %}" method="post" style="display:inline;">
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ request.path }}">
+        <button type="submit" name="language" value="en"
+                style="background: rgba(255,255,255,0.15); border:1px solid rgba(255,255,255,0.4);
+                       border-radius: 6px; color:white; font-size:12px; padding:4px 8px; cursor:pointer;">
+            🇬🇧 EN
+        </button>
+    </form>
+</div>
+
 <div class="bg-shapes">
     <div class="shape"></div>
     <div class="shape"></div>
@@ -44,10 +68,10 @@
                 <span>Glossy Touch</span>
             </div>
             <div class="nav-links">
-                <a href="#" onclick="showPage('home')" class="active">Home</a>
-                <a href="#" onclick="showPage('about')">About</a>
-                <a href="#" onclick="showPage('services')">Services</a>
-                <a href="#" onclick="showPage('contact')">Contact</a>
+                <a href="#" onclick="showPage('home')" class="active">{% trans "Home" %}</a>
+                <a href="#" onclick="showPage('about')">{% trans "About" %}</a>
+                <a href="#" onclick="showPage('services')">{% trans "Services" %}</a>
+                <a href="#" onclick="showPage('contact')">{% trans "Contact" %}</a>
             </div>
         </nav>
     </div>
@@ -63,10 +87,16 @@
                          alt="Modern Technology Interaction"/>
                 </div>
                 <div class="hero-content">
-                    <h1>Welcome to the Future</h1>
-                    <p>Experience cutting-edge glass morphism design that brings depth and elegance to modern web
-                        interfaces. Clean, translucent, and beautifully interactive.</p>
-                    <a href="#" class="cta-button" onclick="showPage('about')">Learn More</a>
+                    <h1 style="font-weight: bold; font-size: 2.8rem; color: white;">
+                        {% trans "سلام 👋 خوش اومدین به وبلاگ شخصی من" %}
+                    </h1>
+                    <p style="font-size: 1.2rem; line-height: 1.8; color: rgba(255,255,255,0.9);">
+                        {% blocktrans %}می‌خوام با مهارت‌ها و تجربه‌های حرفه‌ای من بیشتر آشنا بشید.
+                        مفتخرم که وقت ارزشمندتون رو در اختیار من می‌گذارید 🙏{% endblocktrans %}
+                        <br><br>
+                        <span style="font-style: italic; color:#ffc107;">{% trans "اینجا جاییه برای یادگیری، اشتراک تجربه و رشد مشترک 🌱" %}</span>
+                    </p>
+                    <a href="#" class="cta-button" onclick="showPage('about')">{% trans "بیشتر آشنا بشید" %}</a>
                 </div>
             </section>
 
@@ -353,7 +383,6 @@
     </div>
   </div>
 </div>
-
 
 <!-- FOOTER -->
 <div id="footer">

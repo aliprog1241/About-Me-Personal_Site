@@ -1,0 +1,74 @@
+msgid "Home"
+msgstr "Home"
+
+msgid "About"
+msgstr "About"
+
+msgid "Services"
+msgstr "Services"
+
+msgid "Contact"
+msgstr "Contact"
+
+msgid "Blog"
+msgstr "Blog"
+
+msgid "سلام 👋 خوش اومدین به وبلاگ شخصی من"
+msgstr "Welcome 👋 to my personal blog"
+
+msgid "می‌خوام با مهارت‌ها و تجربه‌های حرفه‌ای من بیشتر آشنا بشید.  مفتخرم که وقت ارزشمندتون رو در اختیار من می‌گذارید 🙏"
+msgstr "I want you to get to know my skills and professional experience better. I’m honored you’re spending your valuable time with me 🙏"
+
+msgid "اینجا جاییه برای یادگیری، اشتراک تجربه و رشد مشترک 🌱"
+msgstr "A place to learn, share experiences, and grow together 🌱"
+
+msgid "بیشتر آشنا بشید"
+msgstr "Learn more"
+
+msgid "Get In Touch"
+msgstr "Get In Touch"
+
+msgid "Full Name"
+msgstr "Full Name"
+
+msgid "Email Address"
+msgstr "Email Address"
+
+msgid "Subject"
+msgstr "Subject"
+
+msgid "Message"
+msgstr "Message"
+
+msgid "Send Message"
+msgstr "Send Message"
+
+msgid "Contact Me"
+msgstr "Contact Me"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "GitHub"
+msgstr "GitHub"
+
+msgid "Phone"
+msgstr "Phone"
+
+msgid "Telegram"
+msgstr "Telegram"
+
+msgid "About Us"
+msgstr "About Us"
+
+msgid "Privacy Policy"
+msgstr "Privacy Policy"
+
+msgid "Terms of Service"
+msgstr "Terms of Service"
+
+msgid "All rights reserved."
+msgstr "All rights reserved."
+
+msgid "Crafted with modern web technologies."
+msgstr "Crafted with modern web technologies."

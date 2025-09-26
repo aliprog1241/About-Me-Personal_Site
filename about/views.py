@@ -34,8 +34,8 @@ def     contact_view(request):
 
 def blog_list(request):
     posts = Post.objects.all().order_by('-created_at')
-    return render(request, "blog_list.html", {"posts": posts})
+    return render(request, "about/blog_list.html", {"posts": posts})
 
 def blog_detail(request, slug):
     post = get_object_or_404(Post, slug=slug)
-    return render(request, "blog_detail.html", {"post": post})
+    return render(request, "about/blog_detail.html", {"post": post})
