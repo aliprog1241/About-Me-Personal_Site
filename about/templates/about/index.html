@@ -83,7 +83,7 @@
         <div class="content-wrapper">
             <section class="hero glass">
                 <div class="hero-image">
-                    <img src="{% static 'images/templatemo-futuristic-girl.jpg' %}"
+                    <img src="{% static 'images/photo_2025-09-27_14-54-43.jpg' %}"
                          alt="Modern Technology Interaction"/>
                 </div>
                 <div class="hero-content">
@@ -318,7 +318,7 @@
       <!-- Contact Form -->
       <div class="contact-form glass"
            style="color:white; text-align: center; max-width: 600px; width: 100%; padding: 30px; flex: 1;">
-        <h2>Get In Touch</h2>
+        <h2>{% trans "Get In Touch" %}</h2>
         <form id="contact-form" method="POST" action="{% url 'contact' %}">
           {% csrf_token %}
           {% if form.errors %}
@@ -327,24 +327,25 @@
             </div>
           {% endif %}
           <div class="form-group">
-            <label for="id_name">Full Name</label>
+            <label for="id_name">{% trans "Full Name" %}</label>
             <input type="text" id="id_name" name="name" required>
           </div>
           <div class="form-group">
-            <label for="id_email">Email Address</label>
+            <label for="id_email">{% trans "Email Address" %}</label>
             <input type="email" id="id_email" name="email" required>
           </div>
           <div class="form-group">
-            <label for="id_subject">Subject</label>
+            <label for="id_subject">{% trans "Subject" %}</label>
             <input type="text" id="id_subject" name="subject">
           </div>
           <div class="form-group">
-            <label for="id_message">Message</label>
+            <label for="id_message">{% trans "Message" %}</label>
             <textarea id="id_message" name="message" required></textarea>
           </div>
-          <button type="submit" class="cta-button">Send Message</button>
+          <button type="submit" class="cta-button">{% trans "Send Message" %}</button>
         </form>
       </div>
+
 
       <!-- Contact Info -->
       <section class="contact-info glass"
@@ -390,15 +391,16 @@
         <footer class="glass">
             <div class="footer-content">
                 <div class="footer-links">
-                    <a href="#" onclick="showPage('about')">About Us</a>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">XML Sitemap</a>
-                    <a href="#" onclick="showPage('contact')">Contact</a>
+                    <a href="#" onclick="showPage('about')">{% trans "About Us" %}</a>
+                    <a href="#">{% trans "Privacy Policy" %}</a>
+                    <a href="#">{% trans "Terms of Service" %}</a>
+                    <a href="#">{% trans "XML Sitemap" %}</a>
+                    <a href="#" onclick="showPage('contact')">{% trans "Contact" %}</a>
                 </div>
                 <div class="copyright">
-                    &copy; 2025 Glossy Touch. All rights reserved. Crafted with modern web technologies.
-                    Provided by <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a>
+                    &copy; 2025 {% trans "Glossy Touch. All rights reserved. Crafted with modern web technologies." %}
+                    {% trans "Provided by" %}
+                    <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a>
                 </div>
             </div>
         </footer>

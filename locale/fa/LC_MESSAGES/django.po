@@ -1,74 +1,112 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: AboutMe 1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-27 14:38+0330\n"
+"PO-Revision-Date: 2025-09-27 12:00+0000\n"
+"Last-Translator: YOUR NAME <you@example.com>\n"
+"Language-Team: Persian\n"
+"Language: fa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\about\templates\about\index.html:71
 msgid "Home"
 msgstr "خانه"
 
+#: .\about\templates\about\index.html:72
 msgid "About"
 msgstr "درباره"
 
+#: .\about\templates\about\index.html:73
 msgid "Services"
 msgstr "خدمات"
 
+#: .\about\templates\about\index.html:74
 msgid "Contact"
 msgstr "تماس"
 
-msgid "Blog"
-msgstr "وبلاگ"
-
+#: .\about\templates\about\index.html:91
 msgid "سلام 👋 خوش اومدین به وبلاگ شخصی من"
 msgstr "سلام 👋 خوش اومدین به وبلاگ شخصی من"
 
-msgid "می‌خوام با مهارت‌ها و تجربه‌های حرفه‌ای من بیشتر آشنا بشید.  مفتخرم که وقت ارزشمندتون رو در اختیار من می‌گذارید 🙏"
-msgstr "می‌خوام با مهارت‌ها و تجربه‌های حرفه‌ای من بیشتر آشنا بشید.  مفتخرم که وقت ارزشمندتون رو در اختیار من می‌گذارید 🙏"
+#: .\about\templates\about\index.html:94
+#, fuzzy
+#| msgid ""
+#| "می‌خوام با مهارت‌ها و تجربه‌های حرفه‌ای من بیشتر آشنا بشید.  مفتخرم که وقت "
+#| "ارزشمندتون رو در اختیار من می‌گذارید 🙏"
+msgid ""
+"می‌خوام با مهارت‌ها و تجربه‌های حرفه‌ای من بیشتر آشنا بشید.\n"
+"                        مفتخرم که وقت ارزشمندتون رو در اختیار من می‌گذارید 🙏"
+msgstr ""
+"می‌خوام با مهارت‌ها و تجربه‌های حرفه‌ای من بیشتر آشنا بشید.  مفتخرم که وقت "
+"ارزشمندتون رو در اختیار من می‌گذارید 🙏"
 
+#: .\about\templates\about\index.html:97
 msgid "اینجا جاییه برای یادگیری، اشتراک تجربه و رشد مشترک 🌱"
 msgstr "اینجا جاییه برای یادگیری، اشتراک تجربه و رشد مشترک 🌱"
 
+#: .\about\templates\about\index.html:99
 msgid "بیشتر آشنا بشید"
 msgstr "بیشتر آشنا بشید"
 
-msgid "Get In Touch"
-msgstr "تماس بگیرید"
+#: .\home\settings.py:94
+msgid "English"
+msgstr ""
 
-msgid "Full Name"
-msgstr "نام کامل"
+#: .\home\settings.py:95
+msgid "فارسی"
+msgstr ""
 
-msgid "Email Address"
-msgstr "ایمیل"
+#~ msgid "Blog"
+#~ msgstr "وبلاگ"
 
-msgid "Subject"
-msgstr "موضوع"
+#~ msgid "Get In Touch"
+#~ msgstr "تماس بگیرید"
 
-msgid "Message"
-msgstr "پیام"
+#~ msgid "Full Name"
+#~ msgstr "نام کامل"
 
-msgid "Send Message"
-msgstr "ارسال پیام"
+#~ msgid "Email Address"
+#~ msgstr "ایمیل"
 
-msgid "Contact Me"
-msgstr "تماس با من"
+#~ msgid "Subject"
+#~ msgstr "موضوع"
 
-msgid "Email"
-msgstr "ایمیل"
+#~ msgid "Message"
+#~ msgstr "پیام"
 
-msgid "GitHub"
-msgstr "گیت‌هاب"
+#~ msgid "Send Message"
+#~ msgstr "ارسال پیام"
 
-msgid "Phone"
-msgstr "تلفن"
+#~ msgid "Contact Me"
+#~ msgstr "تماس با من"
 
-msgid "Telegram"
-msgstr "تلگرام"
+#~ msgid "Email"
+#~ msgstr "ایمیل"
 
-msgid "About Us"
-msgstr "درباره ما"
+#~ msgid "GitHub"
+#~ msgstr "گیت‌هاب"
 
-msgid "Privacy Policy"
-msgstr "سیاست حفظ حریم خصوصی"
+#~ msgid "Phone"
+#~ msgstr "تلفن"
 
-msgid "Terms of Service"
-msgstr "شرایط استفاده"
+#~ msgid "Telegram"
+#~ msgstr "تلگرام"
 
-msgid "All rights reserved."
-msgstr "تمامی حقوق محفوظ است."
+#~ msgid "About Us"
+#~ msgstr "درباره ما"
 
-msgid "Crafted with modern web technologies."
-msgstr "ساخته‌شده با فناوری‌های مدرن وب."
+#~ msgid "Privacy Policy"
+#~ msgstr "سیاست حفظ حریم خصوصی"
+
+#~ msgid "Terms of Service"
+#~ msgstr "شرایط استفاده"
+
+#~ msgid "All rights reserved."
+#~ msgstr "تمامی حقوق محفوظ است."
+
+#~ msgid "Crafted with modern web technologies."
+#~ msgstr "ساخته‌شده با فناوری‌های مدرن وب."

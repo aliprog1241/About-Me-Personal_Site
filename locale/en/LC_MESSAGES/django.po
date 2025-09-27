@@ -1,14 +1,14 @@
 msgid "Home"
-msgstr "Home"
+msgstr "خانه"
 
 msgid "About"
-msgstr "About"
+msgstr "درباره"
 
 msgid "Services"
-msgstr "Services"
+msgstr "خدمات"
 
 msgid "Contact"
-msgstr "Contact"
+msgstr "تماس با ما"
 
 msgid "Blog"
 msgstr "Blog"
@@ -29,37 +29,37 @@ msgid "Get In Touch"
 msgstr "Get In Touch"
 
 msgid "Full Name"
-msgstr "Full Name"
+msgstr "نام کامل"
 
 msgid "Email Address"
-msgstr "Email Address"
+msgstr "آدرس ایمیل"
 
 msgid "Subject"
-msgstr "Subject"
+msgstr "موضوع"
 
 msgid "Message"
-msgstr "Message"
+msgstr "پیام"
 
 msgid "Send Message"
-msgstr "Send Message"
+msgstr "ارسال پیام"
 
 msgid "Contact Me"
-msgstr "Contact Me"
+msgstr "ارتبات با من"
 
 msgid "Email"
-msgstr "Email"
+msgstr "ایمیل"
 
 msgid "GitHub"
-msgstr "GitHub"
+msgstr "گیت هاب"
 
 msgid "Phone"
-msgstr "Phone"
+msgstr "شماره تماس"
 
 msgid "Telegram"
-msgstr "Telegram"
+msgstr "تلگرام"
 
 msgid "About Us"
-msgstr "About Us"
+msgstr "درباره ما"
 
 msgid "Privacy Policy"
 msgstr "Privacy Policy"
