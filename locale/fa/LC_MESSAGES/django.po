@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: AboutMe 1.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-27 14:38+0330\n"
+"POT-Creation-Date: 2025-09-28 14:06+0330\n"
 "PO-Revision-Date: 2025-09-27 12:00+0000\n"
 "Last-Translator: YOUR NAME <you@example.com>\n"
 "Language-Team: Persian\n"
@@ -12,7 +12,38 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: .\about\models.py:32
+msgid "Title"
+msgstr "عنوان"
+
+#: .\about\models.py:33
+msgid "Description"
+msgstr "توضیحات"
+
+#: .\about\models.py:34
+msgid "Image"
+msgstr "تصویر"
+
+#: .\about\models.py:35
+msgid "Project Link"
+msgstr "اتصال پروژه"
+
+#: .\about\models.py:36
+msgid "Created At"
+msgstr ""
+
+#: .\about\models.py:39 .\about\templates\about\index.html:74
+#: .\about\templates\about\portfolio_list.html:8
+#: .\about\templates\about\portfolio_list.html:47
+msgid "Portfolio"
+msgstr "نمونه کار "
+
+#: .\about\models.py:40
+msgid "Portfolios"
+msgstr "نمونه کار ها"
+
 #: .\about\templates\about\index.html:71
+#: .\about\templates\about\portfolio_list.html:45
 msgid "Home"
 msgstr "خانه"
 
@@ -24,15 +55,17 @@ msgstr "درباره"
 msgid "Services"
 msgstr "خدمات"
 
-#: .\about\templates\about\index.html:74
+#: .\about\templates\about\index.html:75 .\about\templates\about\index.html:399
+#: .\about\templates\about\portfolio_list.html:48
+#: .\about\templates\about\portfolio_list.html:94
 msgid "Contact"
 msgstr "تماس"
 
-#: .\about\templates\about\index.html:91
+#: .\about\templates\about\index.html:92
 msgid "سلام 👋 خوش اومدین به وبلاگ شخصی من"
 msgstr "سلام 👋 خوش اومدین به وبلاگ شخصی من"
 
-#: .\about\templates\about\index.html:94
+#: .\about\templates\about\index.html:95
 #, fuzzy
 #| msgid ""
 #| "می‌خوام با مهارت‌ها و تجربه‌های حرفه‌ای من بیشتر آشنا بشید.  مفتخرم که وقت "
@@ -44,13 +77,89 @@ msgstr ""
 "می‌خوام با مهارت‌ها و تجربه‌های حرفه‌ای من بیشتر آشنا بشید.  مفتخرم که وقت "
 "ارزشمندتون رو در اختیار من می‌گذارید 🙏"
 
-#: .\about\templates\about\index.html:97
+#: .\about\templates\about\index.html:98
 msgid "اینجا جاییه برای یادگیری، اشتراک تجربه و رشد مشترک 🌱"
 msgstr "اینجا جاییه برای یادگیری، اشتراک تجربه و رشد مشترک 🌱"
 
-#: .\about\templates\about\index.html:99
+#: .\about\templates\about\index.html:100
 msgid "بیشتر آشنا بشید"
 msgstr "بیشتر آشنا بشید"
+
+#: .\about\templates\about\index.html:322
+msgid "Get In Touch"
+msgstr "تماس بگیرید"
+
+#: .\about\templates\about\index.html:331
+msgid "Full Name"
+msgstr "نام کامل"
+
+#: .\about\templates\about\index.html:335
+msgid "Email Address"
+msgstr "ایمیل"
+
+#: .\about\templates\about\index.html:339
+msgid "Subject"
+msgstr "موضوع"
+
+#: .\about\templates\about\index.html:343
+msgid "Message"
+msgstr "پیام"
+
+#: .\about\templates\about\index.html:346
+msgid "Send Message"
+msgstr "ارسال پیام"
+
+#: .\about\templates\about\index.html:395
+#: .\about\templates\about\portfolio_list.html:90
+msgid "About Us"
+msgstr "درباره ما"
+
+#: .\about\templates\about\index.html:396
+#: .\about\templates\about\portfolio_list.html:91
+msgid "Privacy Policy"
+msgstr "سیاست حفظ حریم خصوصی"
+
+#: .\about\templates\about\index.html:397
+#: .\about\templates\about\portfolio_list.html:92
+msgid "Terms of Service"
+msgstr "شرایط استفاده"
+
+#: .\about\templates\about\index.html:398
+#: .\about\templates\about\portfolio_list.html:93
+msgid "XML Sitemap"
+msgstr ""
+
+#: .\about\templates\about\index.html:402
+#: .\about\templates\about\portfolio_list.html:97
+#, fuzzy
+#| msgid "Crafted with modern web technologies."
+msgid ""
+"Glossy Touch. All rights reserved. Crafted with modern web technologies."
+msgstr "ساخته‌شده با فناوری‌های مدرن وب."
+
+#: .\about\templates\about\index.html:403
+msgid "Provided by"
+msgstr ""
+
+#: .\about\templates\about\portfolio_list.html:42
+msgid "Glossy Touch"
+msgstr ""
+
+#: .\about\templates\about\portfolio_list.html:46
+msgid "Blog"
+msgstr "وبلاگ"
+
+#: .\about\templates\about\portfolio_list.html:57
+msgid "My Portfolio"
+msgstr ""
+
+#: .\about\templates\about\portfolio_list.html:74
+msgid "View Project"
+msgstr ""
+
+#: .\about\templates\about\portfolio_list.html:79
+msgid "No portfolio items yet."
+msgstr ""
 
 #: .\home\settings.py:94
 msgid "English"
@@ -59,27 +168,6 @@ msgstr ""
 #: .\home\settings.py:95
 msgid "فارسی"
 msgstr ""
-
-#~ msgid "Blog"
-#~ msgstr "وبلاگ"
-
-#~ msgid "Get In Touch"
-#~ msgstr "تماس بگیرید"
-
-#~ msgid "Full Name"
-#~ msgstr "نام کامل"
-
-#~ msgid "Email Address"
-#~ msgstr "ایمیل"
-
-#~ msgid "Subject"
-#~ msgstr "موضوع"
-
-#~ msgid "Message"
-#~ msgstr "پیام"
-
-#~ msgid "Send Message"
-#~ msgstr "ارسال پیام"
 
 #~ msgid "Contact Me"
 #~ msgstr "تماس با من"
@@ -96,17 +184,5 @@ msgstr ""
 #~ msgid "Telegram"
 #~ msgstr "تلگرام"
 
-#~ msgid "About Us"
-#~ msgstr "درباره ما"
-
-#~ msgid "Privacy Policy"
-#~ msgstr "سیاست حفظ حریم خصوصی"
-
-#~ msgid "Terms of Service"
-#~ msgstr "شرایط استفاده"
-
 #~ msgid "All rights reserved."
 #~ msgstr "تمامی حقوق محفوظ است."
-
-#~ msgid "Crafted with modern web technologies."
-#~ msgstr "ساخته‌شده با فناوری‌های مدرن وب."

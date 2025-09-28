@@ -3,6 +3,7 @@ from django.shortcuts import render, get_object_or_404
 from .forms import ContactForm
 from .models import Post
 import logging
+from .models import Portfolio
 
 logger = logging.getLogger(__name__)
 
@@ -39,3 +40,10 @@ def blog_list(request):
 def blog_detail(request, slug):
     post = get_object_or_404(Post, slug=slug)
     return render(request, "about/blog_detail.html", {"post": post})
+
+
+
+def portfolio_list(request):
+    items = Portfolio.objects.all().order_by("-created_at")
+    return render(request, "about/portfolio_list.html", {"items": items})
+

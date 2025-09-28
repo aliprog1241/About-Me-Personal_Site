@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.text import slugify
+from django.utils.translation import gettext_lazy as _
 
 
 class ContactMessage(models.Model):
@@ -28,11 +29,15 @@ class Post(models.Model):
         return self.title
 
 class Portfolio(models.Model):
-    title = models.CharField(max_length=200)
-    description = models.TextField()
-    image = models.ImageField(upload_to="portfolio/")
-    link = models.URLField(blank=True, null=True)
-    created_at = models.DateTimeField(auto_now_add=True)
+    title = models.CharField(_("Title"), max_length=200)
+    description = models.TextField(_("Description"))
+    image = models.ImageField(_("Image"), upload_to="portfolio/")
+    link = models.URLField(_("Project Link"), blank=True, null=True)
+    created_at = models.DateTimeField(_("Created At"), auto_now_add=True)
+
+    class Meta:
+        verbose_name = _("Portfolio")
+        verbose_name_plural = _("Portfolios")
 
     def __str__(self):
         return self.title
