@@ -14,11 +14,12 @@ class ContactMessage(models.Model):
         return f"{self.name} - {self.email}"
 
 class Post(models.Model):
-    title = models.CharField(max_length=200)
+    title = models.CharField(_("Title"), max_length=200)
     slug = models.SlugField(unique=True, blank=True)
-    content = models.TextField()
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    content = models.TextField(_("Content"))
+    image = models.ImageField(_("Featured Image"), upload_to="blog/", blank=True, null=True)  # 👈 جدید
+    created_at = models.DateTimeField(_("Created At"), auto_now_add=True)
+    updated_at = models.DateTimeField(_("Updated At"), auto_now=True)
 
     def save(self, *args, **kwargs):
         if not self.slug:

@@ -59,6 +59,12 @@
   <div class="services-grid">
     {% for post in posts %}
     <div class="service-card glass">
+      {% if post.image %}
+        <div style="margin-bottom:15px;">
+          <img src="{{ post.image.url }}" alt="{{ post.title }}"
+               style="width:100%; border-radius:15px; box-shadow:0 8px 20px rgba(0,0,0,0.4);">
+        </div>
+      {% endif %}
       <div class="service-header">
         <div class="service-icon">📝</div>
         <h3>
@@ -82,6 +88,7 @@
     {% endfor %}
   </div>
 </div>
+
 
 <!-- FOOTER -->
 <div id="footer">
